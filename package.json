@@ -1,0 +1,24 @@
+{
+  "name": "stringclass",
+  "version": "1.0.0",
+  "description": "extending the string class",
+  "main": "string-class.js",
+  "dependencies": {},
+  "devDependencies": {"jest":"^24.7.1"},
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "mark bashir",
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolfman360/string-class.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wolfman360/string-class/issues"
+  },
+  "homepage": "https://github.com/wolfman360/string-class#readme"
+}
