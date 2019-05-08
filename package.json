@@ -1,0 +1,11 @@
+{
+  "name": "stringclass",
+  "version": "1.0.0",
+  "description": "extending the string class",
+  "main": "string-class.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "mark bashir",
+  "license": "ISC"
+}
