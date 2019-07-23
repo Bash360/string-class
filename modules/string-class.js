@@ -1,36 +1,36 @@
-String.prototype.hasVowels =   () {
+String.prototype.hasVowels = function () {
   var vowelsRegex = /[aeiou]+/gi; //regular expression to match vowels in a string globally ignoring character case
   return vowelsRegex.test(this);
 };
-String.prototype.isQuestion =   () {
+String.prototype.isQuestion = function () {
   var questionRegex = /^\s*([\w][\s]*)+\?{1}$/gm; //regular expression to match a question in a string
   return questionRegex.test(this); //returns true when string is a question otherwise false
 };
-String.prototype.toUpper =   () {
+String.prototype.toUpper = function () {
   var lowercaseRegex = /[a-z]/g; //regular expression to find lowercase in a string
-  var stringUpperCase = this.replace(lowercaseRegex,   (match) {
+  var stringUpperCase = this.replace(lowercaseRegex, function (match) {
     return String.fromCharCode( //converts charcode to the equivalent character
       match.charCodeAt() - 32); //use the String charCodeAt() method to get the charcode of the match subtracting 32 gives the char code of the capital varter equivalent
   });
 
   return stringUpperCase;
 };
-String.prototype.toLower =   () {
+String.prototype.toLower = function () {
   var uppercaseRegex = /[A-Z]/g; //regular expression to find uppercase in a string
-  var stringLowerCase = this.replace(uppercaseRegex,   (match) {
+  var stringLowerCase = this.replace(uppercaseRegex, function (match) {
     return String.fromCharCode( //converts charcode to the equivalent character
       match.charCodeAt() + 32); //use the String charCodeAt() method to get the charcode of the match adding 32 gives the char code of the lowercase varter equivalent
   });
   return stringLowerCase;
 };
-String.prototype.ucFirst =   () {
+String.prototype.ucFirst = function () {
   return this.split(/\s/)
-    .map(  (currentValue) {
+    .map(function (currentValue) {
       return currentValue[0].toUpper() + currentValue.substr(1); //coverts the first character of the word to uppercase and adds the remaining characters of the word using the subtr() method
     })
     .join(' ');
 };
-String.prototype.words =   () {
+String.prototype.words = function () {
   return this.trim().split(/\s/); //returns the string back as an array using the split() method and space as the seperator
 };
 String.prototype.wordCount = function () {
